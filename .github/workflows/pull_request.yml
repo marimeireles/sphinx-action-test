@@ -6,7 +6,7 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      run: echo "🔥"
+      run: echo "🔥🔥"
     - uses: actions/checkout@v1
     - uses: ammaraskar/sphinx-action@master
       with:
