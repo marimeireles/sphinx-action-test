@@ -2,6 +2,7 @@ import subprocess
 import os
 
 def generate_string_docs(commands_list):
+    print('################## runnin APIgen ########################')
     for c in commands_list:
 
         out = subprocess.check_output(["micromamba", c, "--help"])
