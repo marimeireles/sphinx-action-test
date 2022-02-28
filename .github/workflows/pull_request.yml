@@ -11,9 +11,10 @@ jobs:
     - run: wget -qO- https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba;
     - run: ./bin/micromamba shell init -s bash -p ~/micromamba
     - run: source ~/.bashrc
+    - run: which mamba
+    - run: which micromamba
     - run: micromamba activate
     - run: micromamba install python -c conda-forge
-    - run: echo "mamba was installed succesfully"
     - uses: actions/checkout@v1
     # Standard drop-in approach that should work for most people.
     - uses: ammaraskar/sphinx-action@master
