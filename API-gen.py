@@ -9,7 +9,7 @@ def generate_string_docs(commands_list):
 
         opts = out.decode('utf-8')
 
-        with open('../../docs/source/user_guide/commands_micromamba/' + c + '.rst', 'w') as f:
+        with open('docs/source/user_guide/commands_micromamba/' + c + '.rst', 'w') as f:
             f.write('.. _commands_micromamba/' + c + ':' + '\n\n')
             f.write('``' + c + '``' + '\n')
             f.write('=' * (len(c) + 4) + '\n')
@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
 
     # Generate sub-files for config command
-    with open('../../docs/source/user_guide/commands_micromamba/config.rst', 'a') as f:
+    with open('docs/source/user_guide/commands_micromamba/config.rst', 'a') as f:
         config_subcommands = ['**Subcommands:**\n\n',
                               '- :ref:`commands_micromamba/config/list`\n',
                               '- :ref:`commands_micromamba/config/sources`\n',
