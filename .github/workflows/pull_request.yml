@@ -17,12 +17,13 @@ jobs:
     - run: touch aaaah
     - run: echo "🌈"
 
-    # # Deploy to local repo
-    # - name: Deploy
-    #   run: echo "❤️"
-    #   uses: s0/git-publish-subdir-action@develop
-    #   env:
-    #     REPO: self
-    #     BRANCH: master
-    #     FOLDER: docs
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # Deploy to local repo
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: master
+        FOLDER: docs
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - run: echo "🔥"
