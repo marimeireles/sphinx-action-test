@@ -17,8 +17,7 @@ jobs:
     - run: touch aaaah
     - run: echo "🌈"
 
-      id: commit
-      run: |
+    - run: |
         git config --local user.email "mariana@psychonautgirl.space"
         git config --local user.name "wooot"
         git add --all
@@ -29,9 +28,8 @@ jobs:
            echo "::set-output name=push::true"
         fi
       shell: bash
-    - name: Push changes
       if: steps.commit.outputs.push == 'true'
-      uses: ad-m/github-push-action@master
+     - uses: ad-m/github-push-action@master
       with:
          github_token: ${{ secrets.GITHUB_TOKEN }}
 
