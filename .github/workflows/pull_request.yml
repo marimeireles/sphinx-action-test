@@ -14,6 +14,9 @@ jobs:
       with:
         docs-folder: "docs/"
 
+      run: touch aaaah
+      run: echo "🌈"
+
     # # Deploy to local repo
     # - name: Deploy
     #   run: echo "❤️"
