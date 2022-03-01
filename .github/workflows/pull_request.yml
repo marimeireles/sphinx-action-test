@@ -17,7 +17,7 @@ jobs:
     - run: touch aaaah
     - run: echo "🌈"
 
-    - name: Commit files
+    # - name: Commit files
         # id: commit
       #   run: |
       #     git config --local user.email "mariana@psychonautgirl.space"
