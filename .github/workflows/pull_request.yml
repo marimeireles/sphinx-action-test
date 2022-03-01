@@ -14,11 +14,19 @@ jobs:
       with:
         docs-folder: "docs/"
 
-    # Deploy to local repo
-    - name: Deploy
-      uses: s0/git-publish-subdir-action@develop
-      env:
-        REPO: self
-        BRANCH: master
-        FOLDER: docs
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - run: touch aaaah
+    - run: echo "🌈"
+
+      #   id: commit
+    - run: |
+        git config --local user.email "mariana@psychonautgirl.space"
+        git config --local user.name "wooot"
+        git add --all
+        git commit -m "Add changes" -a
+      shell: bash
+
+    - uses: ad-m/github-push-action@master
+      with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - run: echo "🔥"
