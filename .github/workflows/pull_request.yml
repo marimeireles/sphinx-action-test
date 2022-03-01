@@ -22,12 +22,12 @@ jobs:
         git config --local user.email "mariana@psychonautgirl.space"
         git config --local user.name "wooot"
         git add --all
-    #   if [-z "$(git status --porcelain)"]; then
-    #      echo "::set-output name=push::false"
-    #   else
-    #      git commit -m "Add changes" -a
-    #      echo "::set-output name=push::true"
-    #   fi
+    - if [-z "$(git status --porcelain)"]; then
+         echo "::set-output name=push::false"
+    - else
+         git commit -m "Add changes" -a
+         echo "::set-output name=push::true"
+    - fi
     #   shell: bash
 
     #   if: steps.commit.outputs.push == 'true'
