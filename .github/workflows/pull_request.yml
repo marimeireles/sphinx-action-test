@@ -18,7 +18,7 @@ jobs:
     - run: echo "🌈"
 
     - name: Commit files
-        id: commit
+        # id: commit
       #   run: |
       #     git config --local user.email "mariana@psychonautgirl.space"
       #     git config --local user.name "wooot"
